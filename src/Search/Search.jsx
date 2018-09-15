@@ -17,7 +17,7 @@ class Search extends Component {
     return (
       <div>
         <br/>
-        <Label>Input Place</Label>
+        <Label>Выберите место или выберите из предложенных.</Label>
         <Input onChange = { this.onChange.bind(this) }/>
 
         <ListGroup>
