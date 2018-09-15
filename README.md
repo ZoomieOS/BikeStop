@@ -1,2 +1,0 @@
-# BikeStop
-All bike station
