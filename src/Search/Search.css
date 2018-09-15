@@ -1,0 +1,7 @@
+.nav-option {
+    cursor: pointer
+}
+
+.nav-option:hover {
+    background-color: #87CEFF;
+}
