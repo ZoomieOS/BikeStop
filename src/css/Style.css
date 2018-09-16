@@ -1,0 +1,15 @@
+body {
+	overflow: 	hidden;	
+}
+
+header {
+	background: #000;
+	color:#fff;
+	margin-top:-20px;
+	text-align:center;
+	padding-top:10px;
+}
+
+header > p {
+	padding-bottom: 10px;
+}

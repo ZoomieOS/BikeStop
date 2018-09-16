@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Map from './Map/Map.jsx'
+import './css/Style.css';
 import Search from './Search/Search.jsx'
 import escapeRegExp from "escape-string-regexp";
 import { Col } from 'reactstrap'
