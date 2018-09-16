@@ -4,13 +4,27 @@ import { CardBody, CardTitle, CardSubtitle, CardText, Row, Col } from 'reactstra
 
 class MarkerElement extends Component {
   state = {
-    placeAdditionalDetails: []
+    placeAdditionalDetails: [],
   }
+
+  getBikePointOccupancy() {
+      fetch('https://api-argon.tfl.gov.uk/Occupancy/BikePoints/' + this.props.row.id)
+          .then(response => response.json())
+          .then((oc) => {
+            this.setState({ placeAdditionalDetails: oc[0] })
+          })
+  }
+
+
+  onMarkerClick() {
+        this.getBikePointOccupancy();
+        this.props.onToggleOpen(this.props.row.id, true);
+    }
 
   render() {
     const { row, onToggleOpen, placeToShow, isOpen } = this.props;
     return (
-      <Marker position={ {lat: row.lat, lng: row.lon} } id={ row.id } onClick={() => onToggleOpen(row.id, true)}>
+      <Marker position={ {lat: row.lat, lng: row.lon} } id={ row.id } onClick={() => this.onMarkerClick()}>
           {
             row.id === placeToShow  && isOpen &&
             <Row>
@@ -25,6 +39,9 @@ class MarkerElement extends Component {
                           </CardTitle>
                         </Col>
                         <Col md={6}>
+                            <p>Bikes count: {this.state.placeAdditionalDetails.bikesCount}</p>
+                            <p>Empty docks: {this.state.placeAdditionalDetails.emptyDocks}</p>
+                          <p>Total docks: {this.state.placeAdditionalDetails.totalDocks}</p>
                         </Col>
                     </CardBody>
               </InfoWindow>
