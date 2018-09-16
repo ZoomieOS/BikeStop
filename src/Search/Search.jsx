@@ -21,7 +21,7 @@ class Search extends Component {
         <Input onChange = { this.onChange.bind(this) }/>
 
         <ListGroup>
-          { places.slice(0, 13).map(this.renderPlaces) }
+          { places.slice(0, 1o).map(this.renderPlaces) }
         </ListGroup>
     </div>
     );
