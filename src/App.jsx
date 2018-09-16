@@ -15,7 +15,7 @@ class App extends Component {
 
     placesFiltered: [],
 
-    placeToShow:[],
+    placeToShow: [],
 
     isOpen: false
   }
@@ -54,6 +54,12 @@ class App extends Component {
 
     return (
       <div className="App">
+      <Col>
+        <header>
+            <h1>Велопаркови лондона</h1>
+              <p>Посмотрите, где и какие есть велопарковки.</p>
+            </header>
+          </Col>
           <Col md={ 3 }>
             <Search
               places = { placesFiltered }
