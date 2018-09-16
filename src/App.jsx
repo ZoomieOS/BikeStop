@@ -75,7 +75,7 @@ class App extends Component {
               isOpen={ isOpen }
               center={ center }
               onToggleOpen={ (placeToShow, isOpen) => this.onToggleOpen(placeToShow, isOpen) }
-              containerElement={ <div style={{ height: `67em` }} /> }
+              containerElement={ <div style={{ height: `36.5em` }} /> }
               mapElement={ <div style={{ height: `100%` }} /> }
               loadingElement={ <div style={ { height: `100%` } }></div> }
               googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyCRQSQd7cwt1BdrCbwrB2gc01WwETqooZc&v=3&libraries=places,geometry,drawing'
